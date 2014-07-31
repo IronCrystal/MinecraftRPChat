@@ -2,14 +2,14 @@ package ironcrystal.minecraftrpchat.ranks;
 
 import org.bukkit.ChatColor;
 
-import ironcrystal.minecraftrpchat.file.Files;
+import ironcrystal.minecraftrpchat.file.FileManager;
 
 public enum Rank {
 	NONE(ChatColor.WHITE),
-	DONATOR(Files.getChatColorFromConfig("Donator")),
-	SUPPORTER(Files.getChatColorFromConfig("Supporter")),
-	SPONSOR(Files.getChatColorFromConfig("Sponsor")),
-	VIP(Files.getChatColorFromConfig("VIP"));
+	DONATOR(FileManager.getChatColorFromConfig("Donator")),
+	SUPPORTER(FileManager.getChatColorFromConfig("Supporter")),
+	SPONSOR(FileManager.getChatColorFromConfig("Sponsor")),
+	VIP(FileManager.getChatColorFromConfig("VIP"));
 	
 	private ChatColor color;
 	

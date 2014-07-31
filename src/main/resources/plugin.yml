@@ -1,3 +1,6 @@
 name: MinecraftRPChat
 main: ironcrystal.minecraftrpchat.MinecraftRPChat
 version: 1.0
+commands:
+  chat:
+    description: Shows RP Chat Commands

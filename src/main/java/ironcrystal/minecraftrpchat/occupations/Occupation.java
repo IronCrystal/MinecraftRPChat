@@ -1,17 +1,17 @@
 package ironcrystal.minecraftrpchat.occupations;
 
 import org.bukkit.ChatColor;
-
+import ironcrystal.minecraftrpchat.file.FileManager;
 import ironcrystal.minecraftrp.occupations.Occupations;
-import ironcrystal.minecraftrpchat.file.Files;
 
 public class Occupation {
 	
 	public static ChatColor getChatColor(Occupations occup) {
 		switch (occup) {
-		case CITIZEN: return Files.getChatColorFromConfig(Occupations.CITIZEN.toString());
-		case MAYOR: return Files.getChatColorFromConfig(Occupations.MAYOR.toString());
-		case SUPPLIER: return Files.getChatColorFromConfig(Occupations.SUPPLIER.toString());
+		case CITIZEN: return FileManager.getChatColorFromConfig(Occupations.CITIZEN.toString());
+		case MAYOR: return FileManager.getChatColorFromConfig(Occupations.MAYOR.toString());
+		case SUPPLIER: return FileManager.getChatColorFromConfig(Occupations.SUPPLIER.toString());
+		case SHOPKEEPER: return FileManager.getChatColorFromConfig(Occupations.SHOPKEEPER.toString());
 		default:
 			break;
 		}

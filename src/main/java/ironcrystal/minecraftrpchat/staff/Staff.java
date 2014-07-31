@@ -1,15 +1,16 @@
 package ironcrystal.minecraftrpchat.staff;
 
-import ironcrystal.minecraftrpchat.file.Files;
+import ironcrystal.minecraftrpchat.file.FileManager;
 
 import org.bukkit.ChatColor;
 
 public enum Staff {
 	NONE(ChatColor.WHITE, ""),
-	TRIALMOD(Files.getChatColorFromConfig("TrialMod"), "Trial Mod"),
-	MOD(Files.getChatColorFromConfig("Mod"), "Moderator"),
-	ADMIN(Files.getChatColorFromConfig("Admin"), "Admin"),
-	OWNER(Files.getChatColorFromConfig("Owner"), "Owner");
+	BETATESTER(FileManager.getChatColorFromConfig("Beta Tester"), "Beta Tester"),
+	TRIALMOD(FileManager.getChatColorFromConfig("TrialMod"), "Trial Mod"),
+	MOD(FileManager.getChatColorFromConfig("Mod"), "Moderator"),
+	ADMIN(FileManager.getChatColorFromConfig("Admin"), "Admin"),
+	OWNER(FileManager.getChatColorFromConfig("Owner"), "Owner");
 	
 	private ChatColor color;
 	private String prefix;
@@ -30,6 +31,7 @@ public enum Staff {
 	@Override
 	public String toString() {
 		switch(this) {
+		case BETATESTER: return "Beta Tester";
 		case TRIALMOD: return "Trial Mod";
 		case MOD: return "Mod";
 		case ADMIN: return "Admin";
@@ -41,6 +43,8 @@ public enum Staff {
 	
 	public static Staff getStaffByString(String str) {
 		switch(str) {
+		case "Beta Tester":
+		case "beta tester": return BETATESTER;
 		case "Trial Mod":
 		case "trial mod": return TRIALMOD;
 		case "Mod":

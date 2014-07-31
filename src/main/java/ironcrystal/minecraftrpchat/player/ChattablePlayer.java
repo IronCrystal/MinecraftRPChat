@@ -15,7 +15,7 @@ public class ChattablePlayer {
 		this.uuid = uuid;
 	}
 
-	public UUID getUuid() {
+	public UUID getUUID() {
 		return uuid;
 	}
 	
@@ -49,6 +49,9 @@ public class ChattablePlayer {
 		}
 		else if (player.hasPermission("staff.trialmod")) {
 			return Staff.TRIALMOD;
+		}
+		else if (player.hasPermission("staff.betatester")) {
+			return Staff.BETATESTER;
 		}
 		return Staff.NONE;
 	}
