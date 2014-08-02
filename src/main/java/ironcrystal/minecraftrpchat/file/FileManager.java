@@ -25,10 +25,11 @@ public class FileManager {
 			saveFile(Config, fileConfig);
 			FileManager.loadFile(Config, fileConfig);
 			fileConfig.set("Citizen", 7);
+			fileConfig.set("Construction", 'b');
 			fileConfig.set("Mayor", 'e');
 			fileConfig.set("Supplier", 'a');
 			fileConfig.set("Shopkeeper", 'b');
-			fileConfig.set("Donator", 'f');
+			fileConfig.set("Donator", 'a');
 			fileConfig.set("Supporter", 6);
 			fileConfig.set("Sponsor", 1);
 			fileConfig.set("VIP", 5);

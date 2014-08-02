@@ -6,7 +6,6 @@ import ironcrystal.minecraftrp.player.Mayor;
 import ironcrystal.minecraftrp.player.OccupationalPlayer;
 import ironcrystal.minecraftrp.town.Town;
 import ironcrystal.minecraftrp.town.TownManager;
-import ironcrystal.minecraftrpchat.MinecraftRPChat;
 import ironcrystal.minecraftrpchat.chat.ChatChannel;
 import ironcrystal.minecraftrpchat.chat.ChatChannelManager;
 import ironcrystal.minecraftrpchat.file.FileManager;
@@ -16,9 +15,7 @@ import ironcrystal.minecraftrpchat.staff.Staff;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
@@ -34,11 +31,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class PlayerChat implements Listener {
-	private MinecraftRPChat plugin;
-
-	public PlayerChat(MinecraftRPChat plugin) {
-		this.plugin = plugin;
-	}
 
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onPlayerChat(AsyncPlayerChatEvent event) {
